@@ -13,3 +13,35 @@ Java多态作业练习
 	  				3、提示请选择是否释放技能 ？  1、释放  2、不释放
 	  				4、如果选择1控制台就提示 XXX英雄，成功释放XXX技能
 	  						如果选择2 直接程序结束。提示游戏结束。
+# 第二题
+（1）定义一个宠物类(Pet),它有两个方法：叫cry(),吃东西eat(),定义宠物的子类狗(Dog),猫(Cat),覆盖父类的cry(),eat()方法，里面写System.out.println("猫吃了鱼")这样的打印语句,另外狗有自己的方法看门guardEntrance()，猫自己独有的方法捉老鼠huntMice()
+定义一个Test类,在main中定义两个Pet变量,pet1,pet2，采用引用转型实例化Dog,Cat,分别调用Pet的cry(),eat();
+ 
+(2)将Pet引强制转换为具体的Dog，Cat，在调Dog的guardEntrance（），Cat的huntMice()（提示：先用instanceof进行类型判断）
+Pet p = new Dog()
+p.guradEntrance()
+ 
+
+(3)（思考）编写PetPark类，添加喂养宠物feedPet(Pet pet)的方法,在feedPet中调cry(),eat()方法,实例化PetPark类，再测试类中实例化狗 Dog dog = new Dog(), 猫 Pet cat = new Cat(),PetPark分别调feedPet()方法分别传参数cat,dog。深入理解引入转型和多态
+ 
+# 第三题
+
+编写 电话 移动电话  固定电话 体现三者之间的继承关系
+     电话  包含 属性：品牌，号码
+                方法：打电话  接电话
+     手机  
+              重写父类中  打电话  接电话
+方法 ：接收短信
+     固定电话  
+			  重写父类中  打电话  接电话
+			  方法：接宽带
+
+
+     电话厂：
+         方法：测试电话   testPhone(Phone  p) ,能在方法内调用电话的打电话与接电话方法
+               生产电话   getPhone(int type)
+               当 type 为1 则生成一个固定电话
+                  Type为2 则生成一个手机
+				  其他 则生成一个 电话
+				××注意考虑该方法的返回类型××
+
